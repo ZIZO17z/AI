@@ -8,3 +8,6 @@ duckduckgo-search
 langchain_community
 requests
 python-dotenv
+Pillow
+together
+aiohttp
