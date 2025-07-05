@@ -1,8 +1,19 @@
 [phases.setup]
-nixPkgs = ["python310", "gcc"]
+nixPkgs = [
+  "python310", 
+  "gcc", 
+  "libjpeg", 
+  "zlib", 
+  "libpng", 
+  "libx11", 
+  "libglvnd", 
+  "git", 
+  "alsa-lib", 
+  "libpulseaudio"
+]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
 
 [phases.start]
 cmd = "python agent.py"
